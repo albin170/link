@@ -1,9 +1,7 @@
 /* AI Platforms */
-const platforms = [
-{ name: 'OpenAI', url: 'https://openai.com', short: 'O', desc: 'ChatGPT & API' },
-{ name: 'Gemini', url: 'https://ai.google', short: 'G', desc: 'Google AI' },
-{ name: 'Claude', url: 'https://anthropic.com', short: 'C', desc: 'Anthropic AI' },
-{ name: 'Midjourney', url: 'https://midjourney.com', short: 'MJ', desc: 'AI Images' },
+{ name: 'ElevenLabs', url: 'https://elevenlabs.io', short: 'E', desc: 'AI voice generation' },
+{ name: 'Gamma', url: 'https://gamma.app', short: 'GA', desc: 'AI presentations' },
+{ name: 'Replit AI', url: 'https://replit.com', short: 'R+', desc: 'AI coding tools' }
 ];
 
 
