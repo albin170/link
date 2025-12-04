@@ -1,0 +1,50 @@
+/* Animated gradient background */
+body {
+margin: 0;
+overflow: hidden;
+font-family: Arial;
+background: linear-gradient(120deg, #0f172a, #1e1b4b, #0e7490);
+background-size: 400% 400%;
+animation: gradientShift 12s ease infinite;
+color: white;
+}
+
+
+@keyframes gradientShift {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+
+/* Layout Styling */
+.wrap { position: relative; z-index: 5; max-width: 1100px; padding: 40px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 18px; }
+.card { padding: 18px; background: rgba(255,255,255,0.08); border-radius: 14px; cursor: pointer; backdrop-filter: blur(8px); transition: .3s; }
+.card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+
+
+/* Matrix Canvas */
+#matrix { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+
+
+/* Particle Container */
+#particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+
+
+/* Electric Neon Lines */
+.electric-line {
+position: fixed;
+width: 2px;
+height: 120px;
+background: rgba(0,255,255,0.4);
+filter: blur(2px);
+animation: zap 2s infinite ease-in-out;
+}
+
+
+@keyframes zap {
+0% { transform: translateY(-20px) scaleY(0.4); opacity: 0.4; }
+50% { transform: translateY(40px) scaleY(1); opacity: 1; }
+100% { transform: translateY(120px) scaleY(0.3); opacity: 0.3; }
+}
